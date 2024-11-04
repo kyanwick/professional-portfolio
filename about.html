@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyan Oberas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/logo_bk_bg1.png">
+    <style>
+        /* About Section Styles */
+        .about-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1;
+        }
+
+        .about-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .about-description {
+            padding: 50px;
+            max-width: 60%;
+            margin: 2rem;
+            background: #d5dfd5;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .dark-mode .about-description {
+            background: #282828;
+        }
+
+        .about-description:hover {
+            transform: translateY(-5px);
+        }
+
+        .about-skills {
+            max-width: 35%;
+            padding: 10px;
+            margin: 2rem;
+            background: #98b898;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .dark-mode .about-skills {
+            background: #4a4a4a;
+        }
+
+        .about-skills:hover {
+            transform: translateY(-5px);
+        }
+
+        .about-description h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .about-description h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #33cc33;
+        }
+
+        .about-description p {
+            line-height: 1.6;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        /* Skills Section Styles */
+        .skills-category {
+            margin-bottom: 2rem;
+        }
+
+        .skills-category h3 {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skill-tag {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--bg-secondary);
+            background-color: #dddddd;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: transform 0.2s ease;
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-2px);
+        }
+
+        .skill-tag i {
+            font-size: 0.90rem;
+        }
+
+        /* Dark mode adjustments */
+        body.dark-mode .skill-tag {
+            background-color: #6b6b6b;
+            color: #ffffff;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 768px) {
+            .about-description h1 {
+                font-size: 1.4rem;
+            }
+
+            .about-description h2 {
+                margin-top: 9px;
+                font-size: 1.1rem;
+            }
+
+            .about-description p {
+                font-size: 0.90rem;
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
+
+            .about-description {
+                max-width: 100%;
+                margin-right: 1rem;
+            }
+
+            .about-skills {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body spellcheck="false">
+    <div id="dev-portfolio">
+        <header>
+            <nav>
+                <div class="container">
+                    <div class="logo" id="portfolio-switch"><a href="index.html"></a></div>
+                    <button class="nav-toggle" id="nav-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="nav-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html" id="about">About</a>
+                        <a href="project.html">Projects</a>
+                        <button class="theme-toggle" id="theme-toggle-dev">
+                            <i class="fas fa-sun" id="theme-icon-dev"></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section class="about-section">
+            <div class="about-content">
+                <div class="about-description">
+                    <h1>So <span class="text-green">Kyan,</span> describe yourself...</h1>
+                    <h2>Software Developer & Digital Storyteller</h2>
+                    <p>Innovative software developer with a distinctive background in filmmaking and visual
+                        storytelling, bringing a unique perspective to technical problem-solving and user experience
+                        design. Currently advancing my expertise through Fanshawe College's Advanced Diploma in Computer
+                        Programming and Analysis program, while actively developing applications using C++, C#, and
+                        Java.</p>
+                    <h2>Professional Background</h2>
+                    <p>My journey from cinematography to software development has equipped me with abilities to
+                        translate complex technical concepts into clear, accessible solutions. I approach
+                        problem-solving through both analytical and creative lenses, delivering polished, user-centric
+                        applications with keen attention to detail. My background in visual storytelling enhances my
+                        ability to collaborate effectively across cross-functional teams.</p>
+                    <h2>Education</h2>
+                    <ul>
+                        <li><strong>Advanced Diploma in Computer Programming and Analysis</strong> - Fanshawe College
+                            (In Progress)</li>
+                        <li><strong>Bachelor's Degree in Film Production</strong> - University of Windsor
+                            <ul>
+                                <li>&nbsp;&nbsp;&nbsp;Specialization in Cinematography and Documentary Storytelling</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h2>Career Highlights</h2>
+                    <ul>
+                        <li>Successfully bridged creative and technical domains to develop innovative software solutions
+                        </li>
+                        <li>Applied visual composition principles from filmmaking to enhance UI/UX and game design</li>
+                        <li>Demonstrated strong documentation practices and technical writing skills</li>
+                        <li>Maintained continuous learning mindset, consistently adopting new technologies and
+                            methodologies</li>
+                    </ul>
+                    <h2>Value Proposition</h2>
+                    <p>I bring a mix of technical skill and creativity that helps me solve complex programming problems
+                        in a straightforward, effective way. My background in visual storytelling lets me design
+                        user-friendly experiences and bring fresh ideas to projects. I'm great at spotting real-life
+                        challenges and finding practical solutions, whether that means building an app or something else
+                        that fits the need.</p>
+                    <p><em>Seeking opportunities to leverage my unique background in software development roles where
+                            technical expertise meets creative problem-solving.</em></p>
+                </div>
+
+                <div class="about-skills">
+                    <h1>SKILLS</h1>
+                    <div class="skills-container">
+                        <div class="skills-category">
+                            <h3>Programming Languages</h3>
+                            <div class="skills-list">
+                                <div class="skill-tag"><i class="devicon-cplusplus-plain colored"></i>C++</div>
+                                <div class="skill-tag"><i class="devicon-csharp-plain colored"></i>C#</div>
+                                <div class="skill-tag"><i class="devicon-java-plain colored"></i>Java</div>
+                                <div class="skill-tag"><i class="devicon-javascript-plain colored"></i>JavaScript</div>
+                            </div>
+                        </div>
+
+                        <div class="skills-category">
+                            <h3>Web Technologies</h3>
+                            <div class="skills-list">
+                                <div class="skill-tag"><i class="devicon-html5-plain colored"></i>HTML5</div>
+                                <div class="skill-tag"><i class="devicon-css3-plain colored"></i>CSS3</div>
+                                <div class="skill-tag"><i class="devicon-dotnetcore-plain colored"></i>ASP.NET</div>
+                            </div>
+                        </div>
+                        <div class="skills-category">
+                            <h3>Development Tools</h3>
+                            <div class="skills-list">
+                                <div class="skill-tag"><i class="devicon-visualstudio-plain colored"></i>Visual Studio
+                                </div>
+                                <div class="skill-tag"><i class="devicon-mysql-plain colored"></i>SQL</div>
+                                <div class="skill-tag"><i class="devicon-unity-plain colored"></i>Unity</div>
+                            </div>
+                        </div>
+
+                        <div class="skills-category">
+                            <h3>Creative Tools</h3>
+                            <div class="skills-list">
+                                <div class="skill-tag"><i class="devicon-illustrator-plain colored"></i>Illustrator
+                                </div>
+                                <div class="skill-tag"><i class="devicon-photoshop-plain colored"></i>Photoshop</div>
+                                <div class="skill-tag"><i class="devicon-premierepro-plain colored"></i>Premiere Pro
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="mailto:kyanmigueloberas1@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://youtube.com/your-youtube" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+            <p>&copy; 2024 Kyan Oberas. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

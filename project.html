@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyan Oberas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/logo_bk_bg1.png">
+
+</head>
+
+<style>
+    .projects-container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    .project-card {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .dark-mode .project-card {
+        background: #2d2d2d;
+        color: #ffffff;
+    }
+
+    .project-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .project-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .project-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .project-tags {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin: 0.5rem 0;
+    }
+
+    .tag {
+        background: #e9ecef;
+        color: #495057;
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.875rem;
+    }
+
+    .dark-mode .tag {
+        background: #495057;
+        color: #e9ecef;
+    }
+
+    .project-description {
+        margin: 1rem 0;
+        line-height: 1.6;
+    }
+
+    .slideshow-container {
+        position: relative;
+        max-width: 800px;
+        margin: 1rem auto;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .slide {
+        display: none;
+        width: 100%;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+
+    }
+
+    .slide img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .slide.active {
+        display: block;
+    }
+
+    .prev,
+    .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 1rem;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+
+    .project-link {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.75rem 1.5rem;
+        background: rgba(36, 36, 36, 0.1);
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        border-radius: 6px;
+        transition: background 0.3s ease;
+    }
+
+    .project-link:hover {
+        background: rgba(43, 43, 43, 0.322);
+    }
+
+    .dark-mode .project-link {
+        color: rgb(255, 255, 255);
+        background: rgba(177, 177, 177, 0.1);
+    }
+
+    .dark-mode .project-link:hover {
+        background: rgba(156, 156, 156, 0.1);
+    }
+
+    .dots-container {
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+
+    .dot {
+        height: 8px;
+        width: 8px;
+        background: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 0 4px;
+        cursor: pointer;
+    }
+
+    .dot.active {
+        background: #007bff;
+    }
+</style>
+
+<body spellcheck="false">
+
+
+    <!-- Dev Portfolio -->
+    <div id="dev-portfolio">
+        <header>
+            <nav>
+                <div class="container">
+                    <div class="logo" id="portfolio-switch"><a href="index.html"></a></div>
+                    <button class="nav-toggle" id="nav-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="nav-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html" id="about">About</a>
+                        <a href="project.html">Projects</a>
+                        <button class="theme-toggle" id="theme-toggle-dev">
+                            <i class="fas fa-sun" id="theme-icon-dev"></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="projects-container">
+
+            <!-- Project Bank Game -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h2 class="project-title">Teller's Gambit - A Bank Teller Simulator (In Development)</h2>
+                </div>
+
+                <div class="project-tags">
+                    <span class="tag">C#</span>
+                    <span class="tag">Unity</span>
+                    <span class="tag">Photoshop</span>
+                    <span class="tag">Aseprite</span>
+                </div>
+
+                <p class="project-description">
+                    A narrative-driven game set in a small Texas bank during the 1970s recession. Players take on the
+                    role of a bank teller, handling transactions and verifying documents while navigating the rise of
+                    financial fraud. Inspired by Papers, Please, this project features pixel art, day-to-day choices,
+                    and a 70s-themed soundtrack to create an immersive, retro experience. Developed in Unity with C#.
+                </p>
+
+                <div class="slideshow-container">
+                    <div class="slide active">
+                        <img src="images/project_screenshots/bank1.gif" alt="Bank animated example">
+                    </div>
+                </div>
+
+                <a href="https://forums.tigsource.com/index.php?topic=75580.msg1463467#msg1463467" class="project-link"
+                    target="_blank">View Devlog</a>
+
+            </div>
+
+            <!-- Project Loans Calculator -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h2 class="project-title">Ontario Canada Student Calculator</h2>
+                </div>
+
+                <div class="project-tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">Eclipse</span>
+                </div>
+
+                <p class="project-description">
+                    A Java-based GUI application for calculating and managing student loan repayments. This application
+                    helps visualize how different repayment schedules affect loan costs and interest payments.
+                </p>
+
+                <div class="slideshow-container">
+                    <div class="slide active">
+                        <img src="images/project_screenshots/calc1.png" alt="Project Screenshot 1">
+                    </div>
+                    <div class="slide">
+                        <img src="images/project_screenshots/calc2.png" alt="Project Screenshot 2">
+                    </div>
+
+                    <button class="prev">❮</button>
+                    <button class="next">❯</button>
+
+                    <div class="dots-container">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                <a href="https://github.com/kyanwick/student-loan-calculator" class="project-link" target="_blank">View
+                    Project</a>
+            </div>
+
+            <!-- Project du utility -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h2 class="project-title">Disk Usage Utility</h2>
+                </div>
+
+                <div class="project-tags">
+                    <span class="tag">C++</span>
+                    <span class="tag">Visual Studio Code</span>
+                </div>
+
+                <p class="project-description">
+                    This project implements a custom disk usage (du) utility inspired by Unix, aimed at calculating and
+                    displaying disk space usage across files and directories. The program collects information from the
+                    command line, analyzes disk usage by accessing file sizes and directory structures, and generates a
+                    report based on user-defined options.
+                </p>
+
+                <div class="slideshow-container">
+                    <div class="slide active">
+                        <img src="images/project_screenshots/disk1.png" alt="Project Screenshot 1">
+                    </div>
+                    <div class="slide">
+                        <img src="images/project_screenshots/disk2.png" alt="Project Screenshot 2">
+                    </div>
+
+                    <button class="prev">❮</button>
+                    <button class="next">❯</button>
+
+                    <div class="dots-container">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Project Indoor Golf -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h2 class="project-title">Indoor Golf 3D</h2>
+                </div>
+
+                <div class="project-tags">
+                    <span class="tag">C#</span>
+                    <span class="tag">Unity</span>
+                </div>
+
+                <p class="project-description">
+                    Indoor Golf is a calming mini-golf game that I developed to provide a relaxing experience during
+                    your free time. With soothing graphics and challenging gameplay, players can unwind as they navigate
+                    beautifully designed indoor courses.
+                </p>
+
+                <div class="slideshow-container">
+                    <div class="slide active">
+                        <img src="images/project_screenshots/golf1.png" alt="Project Screenshot 1">
+                    </div>
+                    <div class="slide">
+                        <img src="images/project_screenshots/golf2.png" alt="Project Screenshot 2">
+                    </div>
+                    <div class="slide">
+                        <img src="images/project_screenshots/golf3.png" alt="Project Screenshot 3">
+                    </div>
+
+                    <button class="prev">❮</button>
+                    <button class="next">❯</button>
+
+                    <div class="dots-container">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                <a href="https://kyanwick.itch.io/indoor-golf" class="project-link" target="_blank">View Project</a>
+            </div>
+
+
+        </div> <!-- end project container -->
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const slideshows = document.querySelectorAll('.slideshow-container');
+
+                slideshows.forEach(slideshow => {
+                    let currentSlide = 0;
+                    const slides = slideshow.querySelectorAll('.slide');
+                    const dots = slideshow.querySelectorAll('.dot');
+                    const prev = slideshow.querySelector('.prev');
+                    const next = slideshow.querySelector('.next');
+
+
+                    if (slides.length > 1) {
+                        function showSlide(n) {
+                            slides.forEach(slide => slide.style.display = "none");
+                            dots.forEach(dot => dot.classList.remove('active'));
+
+                            currentSlide = (n + slides.length) % slides.length;
+                            slides[currentSlide].style.display = "block";
+                            if (dots[currentSlide]) {
+                                dots[currentSlide].classList.add('active');
+                            }
+                        }
+
+                        if (prev) {
+                            prev.addEventListener('click', () => showSlide(currentSlide - 1));
+                        }
+                        if (next) {
+                            next.addEventListener('click', () => showSlide(currentSlide + 1));
+                        }
+
+                        dots.forEach((dot, index) => {
+                            dot.addEventListener('click', () => showSlide(index));
+                        });
+
+                        // Show first slide initially
+                        showSlide(0);
+
+                        // slideshow
+                        setInterval(() => showSlide(currentSlide + 1), 10000);
+                    } else {
+                        // If only one slide, hide navigation buttons
+                        if (prev) prev.style.display = 'none';
+                        if (next) next.style.display = 'none';
+                    }
+                });
+            });
+        </script>
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="mailto:kyanmigueloberas1@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://github.com/kyanwick" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/kyan-oberas/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@kyanotv" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                <p>&copy; 2024 Kyan Oberas. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+</body>
+
+</html>

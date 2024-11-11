@@ -12,11 +12,14 @@
 </head>
 
 <style>
-    .projects-container {
-        max-width: 1200px;
-        margin: 2rem auto;
-        padding: 0 1rem;
-    }
+     .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 500px), 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
 
     .project-card {
         background: #ffffff;
@@ -162,6 +165,22 @@
     .dot.active {
         background: #007bff;
     }
+
+    @media (max-width: 768px) {
+            .projects-container {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 0 1rem;
+            }
+
+            .project-card {
+                padding: 1.5rem;
+            }
+
+            .project-title {
+                font-size: 1.25rem;
+            }
+        }
 </style>
 
 <body spellcheck="false">
@@ -189,6 +208,47 @@
         </header>
 
         <div class="projects-container">
+
+            <!-- Movie Matchmaker -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h2 class="project-title">Movie Matchmaker</h2>
+                </div>
+
+                <div class="project-tags">
+                    <span class="tag">React</span>
+                    <span class="tag">Express.js</span>
+                    <span class="tag">Tailwind CSS</span>
+                    <span class="tag">MongoDB</span>
+                </div>
+
+                <p class="project-description">
+                    A full-stack web application that provides personalized movie recommendations based on user preferences using The Movie Database (TMDb) API. Built with React, Express.js, MongoDB, and Tailwind CSS.
+                </p>
+
+                <div class="slideshow-container">
+                    <div class="slide active">
+                        <img src="images/project_screenshots/movie1.png" alt="Project Screenshot 1">
+                    </div>
+                    <div class="slide">
+                        <img src="images/project_screenshots/movie2.png" alt="Project Screenshot 2">
+                    </div>
+                    <div class="slide">
+                        <img src="images/project_screenshots/movie3.png" alt="Project Screenshot 3">
+                    </div>
+
+                    <button class="prev">❮</button>
+                    <button class="next">❯</button>
+
+                    <div class="dots-container">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                <a href="https://thankful-rock-001bea60f.5.azurestaticapps.net/" class="project-link" target="_blank">View Project</a>
+            </div>
 
             <!-- Project API Prayer Times -->
             <div class="project-card">
@@ -321,8 +381,6 @@
                     </div>
                 </div>
             </div>
-
-
 
             <!-- Project Indoor Golf -->
             <div class="project-card">
